@@ -46,7 +46,7 @@ const BarCharts = ({ data }) => {
 	}
 
 	return (
-		<div className="w-full h-[300px] p-6 bg-white rounded-xl shadow-md">
+		<div className="w-full h-[300px] p-3 bg-transparent rounded-xl ">
 			<ResponsiveContainer width="100%" height="100%">
 				<BarChart
 					data={data}

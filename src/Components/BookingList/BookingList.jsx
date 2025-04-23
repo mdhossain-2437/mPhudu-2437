@@ -44,8 +44,13 @@ const BookingList = () => {
 	return (
 		<div className="mt-24 mb-20">
 			{bookedDoctors.length > 0 && (
-				<div className="flex justify-center items-center bg-white mb-10 rounded-2xl shadow-lg border border-gray-200">
-					<BarCharts data={chartData} />
+				<div className="bg-white mb-10 rounded-2xl shadow-lg border border-gray-200 p-6">
+					<h3 className="text-lg md:text-xl font-semibold text-gray-700 mb-4 text-center">
+						Consultation Fee Overview
+					</h3>
+					<div className="flex justify-center items-center">
+						<BarCharts data={chartData} />
+					</div>
 				</div>
 			)}
 			<TextHeader

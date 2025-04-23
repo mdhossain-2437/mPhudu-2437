@@ -7,7 +7,7 @@ const Hero = ({ handleSearch }) => {
 	const [searchTerm, setSearchTerm] = useState("");
 
 	return (
-		<div className="mt-24 mb-16 px-4 py-6 w-full mx-auto bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-8 rounded-3xl relative overflow-hidden">
+		<div className="mt-24 mb-16 px-4 py-6 w-full mx-auto bg-gradient-to-r from-blue-50 to-indigo-50  border-8 border-transparent sm:max-w-xl md:max-w-full lg:max-w-screen-xl shadow-xl md:px-24 lg:px-8 lg:py-8 rounded-3xl relative overflow-hidden">
 			<div className="max-w-3xl mx-auto text-center mb-12">
 				<h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
 					Dependable Care, Backed by Trusted Professionals.
