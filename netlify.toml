@@ -3,9 +3,10 @@
 [build]
   command = "npm run build"  # Command to build the project
   publish = "dist"           # Directory to deploy
-  environment = {
-    NODE_VERSION = "18"      # Specify Node.js version (adjust if needed)
-  }
+
+# Environment variables
+[build.environment]          # Correct syntax for environment table
+  NODE_VERSION = "18"      # Specify Node.js version (adjust if needed)
 
 # Redirects and rewrites for Single Page Application (SPA)
 [[redirects]]
