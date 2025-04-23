@@ -10,14 +10,11 @@ import LoadingSpinner from "../Components/LoadingSpinner/LoadingSpinner";
 const fetchWithFallback = async (url) => {
 	try {
 		const response = await fetch(url);
-		if (!response.ok) {
-			console.error(`Failed to fetch ${url}: ${response.statusText}`);
-			throw new Error(`Failed to fetch data (status: ${response.status})`);
-		}
-		return response.json();
+		if (!response.ok) throw new Error("Failed to fetch data");
+		return response;
 	} catch (error) {
 		console.error("Fetch error:", error);
-		throw error;
+		return null;
 	}
 };
 
@@ -31,16 +28,32 @@ export const router = createBrowserRouter([
 			{
 				path: "/",
 				Component: Home,
-				loader: () => fetchWithFallback("/doctors.json"),
+				loader: async () => {
+					const data = await fetchWithFallback("../doctors.json");
+					if (!data) throw new Error("Failed to load data");
+					return data;
+				},
+				loading: LoadingSpinner,
 			},
 			{
 				path: "/doctorDetails/:id",
-				loader: () => fetchWithFallback("/doctors.json"),
+				loader: async () => {
+					const data = await fetchWithFallback("../doctors.json");
+					if (!data) throw new Error("Failed to load data");
+					return data;
+				},
+				loading: LoadingSpinner,
 				Component: DoctorDetails,
 			},
+
 			{
 				path: "/my_booking",
-				loader: () => fetchWithFallback("/doctors.json"),
+				loader: async () => {
+					const data = await fetchWithFallback("../doctors.json");
+					if (!data) throw new Error("Failed to load data");
+					return data;
+				},
+				loading: LoadingSpinner,
 				Component: BookingList,
 			},
 			{

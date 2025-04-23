@@ -20,27 +20,27 @@ const fetchWithFallback = async (url) => {
 };
 
 const router = createBrowserRouter([
-	{
-		path: "/",
-		element: <MainLayout />,
-		errorElement: <ErrorPage />,
-		children: [
-			{
-				index: true,
+  {
+    path: "/",
+    element: <MainLayout />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        index: true,
 				element: <Home />,
-			},
-			{
-				path: "my_booking",
-				element: <BookingList />,
+      },
+      {
+        path: "my_booking",
+        element: <BookingList />,
 				loader: () => fetchWithFallback("/doctors.json"),
 				loading: () => <LoadingSpinner />,
-			},
-			{
-				path: "blogs",
+      },
+      {
+        path: "blogs",
 				element: <Blogs />,
-			},
-			{
-				path: "contact",
+      },
+      {
+        path: "contact",
 				element: <Contact />,
 			},
 		],

@@ -1,7 +1,13 @@
-[build]
-  command = "npm run build"
-  publish = "dist"
+# Netlify Build Settings for Phudu Project
 
+[build]
+  command = "npm run build"  # Command to build the project
+  publish = "dist"           # Directory to deploy
+  environment = {
+    NODE_VERSION = "18"      # Specify Node.js version (adjust if needed)
+  }
+
+# Redirects and rewrites for Single Page Application (SPA)
 [[redirects]]
   from = "/*"
   to = "/index.html"
