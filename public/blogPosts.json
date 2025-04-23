@@ -1,0 +1,39 @@
+{
+  "blogPosts": [
+    {
+      "id": 1,
+      "title": "What is useState and how does it work in React?",
+      "answer": "useState is a React Hook that lets you add state to functional components. It returns an array with two elements: the current state value and a function to update it. When the state updates, React re-renders the component.",
+      "author": "addet",
+      "date": "23-04-2025"
+    },
+    {
+      "id": 2,
+      "title": "What is the purpose of useEffect in React?",
+      "answer": "The useEffect hook in React is used to handle side effects in functional components. Side effects are operations that affect something outside the scope of the current function, such as: fetching data from an API, subscribing to a data stream or event listener, directly interacting with the DOM, setting up timers.",
+      "author": "addet",
+      "date": "23-04-2025"
+    },
+    {
+      "id": 3,
+      "title": "What is a custom hook in React and when should you use one?",
+      "answer": "A custom hook in React is a reusable function that starts with use and lets you encapsulate logic using React hooks like useState, useEffect, etc. Custom hooks allow you to extract component logic into reusable functions, promoting code reuse and keeping components clean.",
+      "author": "addet",
+      "date": "23-04-2025"
+    },
+    {
+      "id": 4,
+      "title": "Difference between controlled and uncontrolled components? Which one is better?",
+      "answer": "In React, controlled and uncontrolled components refer to how form data is handled. A controlled component is one where the form input element's value is controlled by React state. This means the value is stored in a state variable and updated through an onChange handler. Because of this, the data is always in",
+      "author": "addet",
+      "date": "23-04-2025"
+    },
+    {
+      "id": 5,
+      "title": "Tell us something about useFormStatus() (explore and explain)",
+      "answer": "useFormStatus() — a newer hook introduced in React 18 with React Server Components (RSC) and form actions, especially when working with Server Actions in Next.js 13+.",
+      "author": "addet",
+      "date": "23-04-2025"
+    }
+  ]
+}
